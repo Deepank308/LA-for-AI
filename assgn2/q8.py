@@ -72,7 +72,7 @@ def blurr_images(img_choice, option):
         axarr[0, i].imshow(img, cmap='gray', vmin = 0, vmax = 255)
         axarr[0, i].axis('off')
 
-        axarr[1, i].imshow(blurred, cmap='gray', vmin = 0, vmax = 255)
+        axarr[1, i].imshow(blurred, cmap='gray')
         axarr[1, i].axis('off')
 
     print(f'Saving {img_choice}-{option}...')
