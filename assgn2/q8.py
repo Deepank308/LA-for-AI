@@ -44,10 +44,10 @@ def get_blurring_matrices(option=0):
         for p in p_list:
             matrices_list.append(np.full(shape=(p, p), fill_value=1/(p**2), dtype=np.float64))
     elif option == 1:
-        matrices_list.append(np.array(np.array([[1, -1]])))
+        matrices_list.append(np.array([[1, -1]]))
 
     elif option == 2:
-        matrices_list.append(np.array(np.array([[1], [-1]])))
+        matrices_list.append(np.array([[1], [-1]]))
     else:
         print(f'Invalid option type. Expected: [0/1/2]. Found: {option}')
 
@@ -88,5 +88,5 @@ def main():
     print('Done...')
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
