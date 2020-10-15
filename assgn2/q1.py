@@ -1,11 +1,21 @@
+"""
+Deepank Agrawal
+17CS30011
+
+LA for AI 
+Assignment 2
+"""
 import numpy as np
 from pprint import PrettyPrinter
 
 
 def gram_schmidt(A):
-    """Orthogonalize a set of vectors stored as the columns of matrix A."""
+    """
+    Orthogonalize a set of vectors stored as the columns of matrix A.
+    """
     # Get the number of vectors.
     n = A.shape[1]
+
     for j in range(n):
         # To orthogonalize the vector in column j with respect to the
         # previous vectors, subtract from it its projection onto
@@ -13,11 +23,18 @@ def gram_schmidt(A):
         temp = np.copy(A[:, j])
         for k in range(j):
             A[:, j] -= np.dot(A[:, k], temp) * A[:, k]
+        
+        # normalize
         A[:, j] = A[:, j] / np.linalg.norm(A[:, j])
+    
     return np.round(A, decimals=3)
 
 
 def construct_matrix_get_gm(vec_list):
+    """
+    Create matrix using given vector list
+    Then calculate the G-S othogonalization
+    """
     A = vec_list[0]
     for v in vec_list[1:]:
         A = np.hstack((A, v))
