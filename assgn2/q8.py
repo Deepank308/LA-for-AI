@@ -64,16 +64,14 @@ def blurr_images(img_choice, option):
 
     B_matrices = get_blurring_matrices(option=option)
 
-    _, axarr = plt.subplots(2, len(B_matrices))
+    _, axarr = plt.subplots(1, len(B_matrices) + 1)
 
-    axarr = axarr.reshape((2, len(B_matrices)))
+    axarr[0].imshow(img, cmap='gray', vmin = 0, vmax = 255)
+    axarr[0].axis('off')
     for i, B in enumerate(B_matrices):
         blurred = convolve(B, C)
-        axarr[0, i].imshow(img, cmap='gray', vmin = 0, vmax = 255)
-        axarr[0, i].axis('off')
-
-        axarr[1, i].imshow(blurred, cmap='gray', vmin = 0, vmax = 255)
-        axarr[1, i].axis('off')
+        axarr[i + 1].imshow(blurred, cmap='gray')
+        axarr[i + 1].axis('off')
 
     print(f'Saving {img_choice}-{option}...')
     plt.savefig(f'{img_choice}-{option}.jpg')
