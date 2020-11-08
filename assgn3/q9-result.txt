@@ -1,0 +1,62 @@
+[[-0.70710678  0.        ]
+ [ 0.         -0.70710678]
+ [-1.          1.        ]]
+Condition number: 2.23606797749979
+
+[[-2  1  2]
+ [ 0  2  0]]
+Condition number: 1.715010090561728
+
+[[1.  0.9]
+ [0.9 0.8]]
+Condition number: 325.99693248647975
+Invertible
+Determinant: -0.009999999999999995
+
+[[  1.   0.]
+ [  0. -10.]]
+Condition number: 10.0
+Invertible
+Determinant: -10.000000000000002
+
+[[ 1.  1.]
+ [ 1. 10.]]
+Condition number: 11.35638827945676
+Invertible
+Determinant: 9.000000000000002
+
+[[1. 1.]
+ [1. 5.]]
+Condition number: 6.854101966249685
+Invertible
+Determinant: 4.0
+
+[[1. 1.]
+ [1. 1.]]
+Condition number: 5.961777047638983e+16
+Not Invertible
+
+[[1.  1. ]
+ [1.  0.1]]
+Condition number: 3.0124935233004138
+Invertible
+Determinant: -0.9
+
+[[1.   1.  ]
+ [1.   0.01]]
+Condition number: 2.6535504563252843
+Invertible
+Determinant: -0.99
+
+[[1.e+00 1.e+00]
+ [1.e+00 1.e-04]]
+Condition number: 2.618385273654826
+Invertible
+Determinant: -0.9999
+
+[[1. 1.]
+ [1. 0.]]
+Condition number: 2.6180339887498953
+Invertible
+Determinant: -1.0
+
